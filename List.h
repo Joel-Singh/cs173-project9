@@ -81,9 +81,9 @@ public:
     {
         os << "[ ";
         for ( int i = 0; i < l.size-1; i++ )
-            os << l.list[i] << ", ";
+            os << l.arr[i] << ", ";
         if ( l.size != 0 )
-            os << l.list[l.size-1] << " ]";
+            os << l.arr[l.size-1] << " ]";
         else
             os << " ]";
         return os;
