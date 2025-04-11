@@ -15,7 +15,11 @@ using namespace std;
 
 int main ( void )
 {
-    /*List<int> l1;*/
+    List<int> l1;
+    cout << "Ran default constructor" << endl;
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l1 << endl;
+
     /**/
     /*l1.append(1);*/
     /*l1.append(2);*/
