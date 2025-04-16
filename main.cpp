@@ -193,4 +193,20 @@ int main ( void )
     cout << "Expected output: [ 1, 2, 3]" << endl;
     cout << "Actual output: " << l21 << endl;
     cout << "-------" << endl;
+
+    cout << "Using = operator on empty list" << endl;
+    List<int> l22, l23;
+    l23 = l22;
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l23 << endl;
+    cout << "-------" << endl;
+
+    cout << "Using = operator on non-empty lists" << endl;
+    List<int> l24, l25;
+    l24.append(1);
+    l24.append(2);
+    l25 = l24;
+    cout << "Expected output: [ 1, 2 ]" << endl;
+    cout << "Actual output: " << l25 << endl;
+    cout << "-------" << endl;
 }

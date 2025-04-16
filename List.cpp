@@ -47,6 +47,20 @@ List<T>::~List()
 //==============================================================
 // operator=
 //==============================================================
+template <typename T>
+List<T> List<T>::operator= ( const List<T>& l ) {
+    delete[] arr;
+
+    capacity = DEFAULT_ARRAY_SIZE;
+    size = 0;
+    arr = new T[capacity];
+
+    for (int i = 0; i < l.length(); i++) {
+        this->append(l[i]);
+    }
+
+    return *this;
+};
 
 //==============================================================
 // append
