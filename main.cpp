@@ -177,4 +177,20 @@ int main ( void )
     cout << "Actual output: " << (l16 + l17) << endl;
     cout << "-------" << endl;
 
+    cout << "Running copy constructor on empty list" << endl;
+    List<int> l18;
+    List<int> l19(l18);
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l19 << endl;
+    cout << "-------" << endl;
+
+    cout << "Running copy constructor on non-empty list" << endl;
+    List<int> l20;
+    l20.append(1);
+    l20.append(2);
+    l20.append(3);
+    List<int> l21(l20);
+    cout << "Expected output: [ 1, 2, 3]" << endl;
+    cout << "Actual output: " << l21 << endl;
+    cout << "-------" << endl;
 }

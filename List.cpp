@@ -24,6 +24,16 @@ List<T>::List() {
 //==============================================================
 // copy constructor
 //==============================================================
+template <typename T>
+List<T>::List(const List& l) {
+    capacity = DEFAULT_ARRAY_SIZE;
+    size = 0;
+    arr = new T[capacity];
+
+    for (int i = 0; i < l.length(); i++) {
+        this->append(l[i]);
+    }
+}
 
 //==============================================================
 // destructor
