@@ -43,8 +43,19 @@ List<T>::~List()
 //==============================================================
 template <typename T>
 void List<T>::append(T item) {
-    arr[size] = item;
     size += 1;
+    if (size > capacity) {
+        T *bigger_arr = new T[capacity*2];
+        for (int i = 0; i < capacity; i++) {
+            bigger_arr[i] = arr[i];
+        }
+
+        delete[] arr;
+        capacity *= 2;
+
+        arr = bigger_arr;
+    }
+    arr[size-1] = item;
 }
 
 //==============================================================
