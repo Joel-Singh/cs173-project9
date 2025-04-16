@@ -17,7 +17,7 @@ template <typename T>
 List<T>::List() {
     capacity = DEFAULT_ARRAY_SIZE;
     size = 0;
-    arr = new int[10];
+    arr = new int[capacity];
 }
 
 
