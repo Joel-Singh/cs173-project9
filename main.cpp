@@ -127,4 +127,39 @@ int main ( void )
         cout << "Thrown error" << endl;
     }
     cout << "-------" << endl;
+
+    cout << "Running remove operator on length 1 list" << endl;
+    List<int> l11;
+    l11.append(99);
+    l11.remove(0);
+
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l11 << endl;
+    cout << "-------" << endl;
+
+    cout << "Running remove operator on length 3 list" << endl;
+    List<int> l12;
+    l12.append(77);
+    l12.append(88);
+    l12.append(99);
+
+    l12.remove(1);
+
+
+    cout << "Expected output: [ 77, 99 ]" << endl;
+    cout << "Actual output: " << l12 << endl;
+    cout << "-------" << endl;
+
+    cout << "Removal method at invalid index should throw error" << endl;
+    List<int> l13;
+    cout << "Expected output: Thrown error" << endl;
+    cout << "Actual output: ";
+    try {
+        l13.remove(1);
+        cout << "Not thrown error" << endl;
+    } catch (...) {
+        cout << "Thrown error" << endl;
+    }
+    cout << "-------" << endl;
+
 }

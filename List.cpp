@@ -101,6 +101,18 @@ T& List<T>::operator[] (int position) const {
 // Valid indices are 0 to size-1.   Invalid indices generate
 // a run-time error and end the program.
 //==============================================================
+template <typename T>
+void List<T>::remove(int position) {
+    bool valid_pos = position >= 0 && position <= size-1;
+    if (!valid_pos) {
+        throw runtime_error("Invalid index");
+    }
+
+    for (int i = position+1; i < size; i++) {
+        arr[i-1] = arr[i];
+    }
+    size--;
+};
 
 //==============================================================
 // isEmpty
