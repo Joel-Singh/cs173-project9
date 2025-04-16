@@ -55,9 +55,15 @@ void List<T>::append(T item) {
 //==============================================================
 template <typename T>
 void List<T>::insert(T item, int position) {
+
     size += 1;
     if (size > capacity) {
         reallocate();
+    }
+
+    bool valid_pos = position >= 0 && position < this->length();
+    if (!valid_pos) {
+        throw runtime_error("Invalid index");
     }
 
     for (int i = size; i > position; i--) {

@@ -115,4 +115,16 @@ int main ( void )
     cout << "Expected output: 99" << endl;
     cout << "Actual output: " << l9[1] << endl;
     cout << "-------" << endl;
+
+    cout << "insertion operator at invalid index should throw error" << endl;
+    List<int> l10;
+    cout << "Expected output: Thrown error" << endl;
+    cout << "Actual output: ";
+    try {
+        l10.insert(99, 1);
+        cout << "Not thrown error" << endl;
+    } catch (...) {
+        cout << "Thrown error" << endl;
+    }
+    cout << "-------" << endl;
 }
