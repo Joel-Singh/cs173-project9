@@ -132,7 +132,6 @@ int main ( void )
     List<int> l11;
     l11.append(99);
     l11.remove(0);
-
     cout << "Expected output: [  ]" << endl;
     cout << "Actual output: " << l11 << endl;
     cout << "-------" << endl;
@@ -142,10 +141,7 @@ int main ( void )
     l12.append(77);
     l12.append(88);
     l12.append(99);
-
     l12.remove(1);
-
-
     cout << "Expected output: [ 77, 99 ]" << endl;
     cout << "Actual output: " << l12 << endl;
     cout << "-------" << endl;
