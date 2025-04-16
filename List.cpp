@@ -67,6 +67,15 @@ int List<T>::length() const {
 // Valid indices are 0 to size-1.   Invalid indices generate
 // a run-time error and end the program.
 //==============================================================
+template <typename T>
+T& List<T>::operator[] (int position) const {
+    bool is_valid = position >= 0 && position < this->length();
+    if (is_valid) {
+        return arr[position];
+    } else {
+        throw runtime_error("Invalid index");
+    }
+}
 
 //==============================================================
 // remove

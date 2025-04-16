@@ -87,4 +87,23 @@ int main ( void )
     cout << "Expected output: 13" << endl;
     cout << "Actual output: " << l6.length() << endl;
     cout << "-------" << endl;
+
+    cout << "[] operator at valid index" << endl;
+    List<int> l7;
+    l7.append(89);
+    cout << "Expected output: 89" << endl;
+    cout << "Actual output: " << l7[0] << endl;
+    cout << "-------" << endl;
+
+    cout << "[] operator at invalid index should throw error" << endl;
+    List<int> l8;
+    cout << "Expected output: Thrown error" << endl;
+    cout << "Actual output: ";
+    try {
+        l8[0];
+        cout << "Not thrown error" << endl;
+    } catch (...) {
+        cout << "Thrown error" << endl;
+    }
+    cout << "-------" << endl;
 }
