@@ -209,4 +209,21 @@ int main ( void )
     cout << "Expected output: [ 1, 2 ]" << endl;
     cout << "Actual output: " << l25 << endl;
     cout << "-------" << endl;
+
+    cout << "Running clear on empty list" << endl;
+    List<int> l26;
+    l26.clear();
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l26 << endl;
+    cout << "-------" << endl;
+
+    cout << "Running clear on a non-empty list" << endl;
+    List<int> l27;
+    l27.append(1);
+    l27.append(2);
+    l27.append(3);
+    l27.clear();
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << l27 << endl;
+    cout << "-------" << endl;
 }
