@@ -57,6 +57,34 @@ int main ( void )
     cout << "Actual output: " << l4.isEmpty() << endl;
     cout << "-------" << endl;
 
+    cout << "Running length on empty list" << endl;
+    List<int> l5;
+    cout << "Expected output: 0" << endl;
+    cout << "Actual output: " << l5.length() << endl;
+    cout << "-------" << endl;
 
+    cout << "Running length on list of len 1" << endl;
+    l5.append(0);
+    cout << "Expected output: 1" << endl;
+    cout << "Actual output: " << l5.length() << endl;
+    cout << "-------" << endl;
 
+    cout << "Running length on list of len 13" << endl;
+    List<int> l6;
+    l6.append(1);
+    l6.append(2);
+    l6.append(3);
+    l6.append(4);
+    l6.append(5);
+    l6.append(6);
+    l6.append(7);
+    l6.append(8);
+    l6.append(9);
+    l6.append(10);
+    l6.append(11);
+    l6.append(12);
+    l6.append(13);
+    cout << "Expected output: 13" << endl;
+    cout << "Actual output: " << l6.length() << endl;
+    cout << "-------" << endl;
 }
