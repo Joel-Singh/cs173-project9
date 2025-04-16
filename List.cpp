@@ -17,7 +17,7 @@ template <typename T>
 List<T>::List() {
     capacity = DEFAULT_ARRAY_SIZE;
     size = 0;
-    arr = new int[capacity];
+    arr = new T[capacity];
 }
 
 
@@ -41,6 +41,11 @@ List<T>::~List()
 //==============================================================
 // append
 //==============================================================
+template <typename T>
+void List<T>::append(T item) {
+    arr[size] = item;
+    size += 1;
+}
 
 //==============================================================
 // insert  ( item, position )
