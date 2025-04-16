@@ -158,4 +158,23 @@ int main ( void )
     }
     cout << "-------" << endl;
 
+    cout << "Running + operator on empty lists" << endl;
+    List<int> l14, l15;
+    cout << "Expected output: [  ]" << endl;
+    cout << "Actual output: " << (l14 + l15) << endl;
+    cout << "-------" << endl;
+
+    cout << "Running + operator on non-empty lists" << endl;
+    List<int> l16, l17;
+    l16.append(1);
+    l16.append(2);
+    l16.append(3);
+    l17.append(4);
+    l17.append(5);
+    l17.append(6);
+    l17.append(7);
+    cout << "Expected output: [ 1, 2, 3, 4, 5, 6, 7 ]" << endl;
+    cout << "Actual output: " << (l16 + l17) << endl;
+    cout << "-------" << endl;
+
 }

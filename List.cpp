@@ -126,6 +126,20 @@ bool List<T>::isEmpty() const {
 //==============================================================
 // operator+  (concatenate two lists)
 //==============================================================
+template <typename T>
+List<T> List<T>::operator+ (const List<T>& l) const {
+    List<T> new_list;
+
+    for (int i = 0; i < this->length(); i++) {
+        new_list.append((*this)[i]);
+    }
+
+    for (int i = 0; i < l.length(); i++) {
+        new_list.append(l[i]);
+    }
+
+    return new_list;
+};
 
 //==============================================================
 // clear
