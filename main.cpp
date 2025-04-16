@@ -116,7 +116,7 @@ int main ( void )
     cout << "Actual output: " << l9[1] << endl;
     cout << "-------" << endl;
 
-    cout << "insertion operator at invalid index should throw error" << endl;
+    cout << "insertion method at invalid index should throw error" << endl;
     List<int> l10;
     cout << "Expected output: Thrown error" << endl;
     cout << "Actual output: ";
