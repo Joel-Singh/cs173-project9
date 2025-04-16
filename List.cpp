@@ -45,15 +45,7 @@ template <typename T>
 void List<T>::append(T item) {
     size += 1;
     if (size > capacity) {
-        T *bigger_arr = new T[capacity*2];
-        for (int i = 0; i < capacity; i++) {
-            bigger_arr[i] = arr[i];
-        }
-
-        delete[] arr;
-        capacity *= 2;
-
-        arr = bigger_arr;
+        reallocate();
     }
     arr[size-1] = item;
 }
@@ -96,5 +88,17 @@ void List<T>::append(T item) {
 // *** If you choose to implement this.  It is not part of the
 // public interface so you may opt to do something different. ***
 //==============================================================
+template <typename T>
+void List<T>::reallocate( void ) {
+    T *bigger_arr = new T[capacity*2];
+    for (int i = 0; i < capacity; i++) {
+        bigger_arr[i] = arr[i];
+    }
+
+    delete[] arr;
+    capacity *= 2;
+
+    arr = bigger_arr;
+}
 
 //==============================================================
