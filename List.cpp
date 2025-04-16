@@ -53,6 +53,19 @@ void List<T>::append(T item) {
 //==============================================================
 // insert  ( item, position )
 //==============================================================
+template <typename T>
+void List<T>::insert(T item, int position) {
+    size += 1;
+    if (size > capacity) {
+        reallocate();
+    }
+
+    for (int i = size; i > position; i--) {
+        arr[size] = arr[size-1];
+    }
+
+    arr[position] = item;
+};
 
 //==============================================================
 // length

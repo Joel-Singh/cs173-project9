@@ -106,4 +106,13 @@ int main ( void )
         cout << "Thrown error" << endl;
     }
     cout << "-------" << endl;
+
+    cout << "Running insertion operator" << endl;
+    List<int> l9;
+    l9.append(1);
+    l9.append(2);
+    l9.insert(99, 1);
+    cout << "Expected output: 99" << endl;
+    cout << "Actual output: " << l9[1] << endl;
+    cout << "-------" << endl;
 }
