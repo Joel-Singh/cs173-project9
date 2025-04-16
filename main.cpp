@@ -45,6 +45,18 @@ int main ( void )
     cout << "Actual output: " << l3 << endl;
     cout << "-------" << endl;
 
+    cout << "Running isEmpty on empty list" << endl;
+    List<int> l4;
+    cout << "Expected output: 1" << endl;
+    cout << "Actual output: " << l4.isEmpty() << endl;
+    cout << "-------" << endl;
+
+    l4.append(1);
+    cout << "Running isEmpty on non-empty list" << endl;
+    cout << "Expected output: 0" << endl;
+    cout << "Actual output: " << l4.isEmpty() << endl;
+    cout << "-------" << endl;
+
 
     /*List<int> l2(l1);*/
     /*List<int> l3;*/
